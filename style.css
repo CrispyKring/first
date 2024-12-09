@@ -1,45 +1,97 @@
 
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-        .hero {
-            background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaThjNmswZGZtd2x6MjhhMTZyYWE5MTUzOTBnMzlvZGVrazR5Y2FiMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2UCzsg3w4xQ2wNEB1g/giphy.webp'); /* Replace with a relevant image URL */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: bold;
-        }
-        .hero p {
-            font-size: 1.2rem;
-        }
-        .btn-primary {
-            background-color: #6c63ff;
-            border: none;
-        }
-        .btn-primary:hover {
-            background-color: #574bd8;
-        }
-        .nav-link {
-            color: white !important;
-            transition: color 0.3s;
-        }
-        .nav-link:hover {
-            color: #6c63ff !important;
-        }
-        canvas {
-            border: 1px solid #ccc;
-            display: block;
-            margin: 20px auto;
-        }
-    
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaThjNmswZGZtd2x6MjhhMTZyYWE5MTUzOTBnMzlvZGVrazR5Y2FiMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2UCzsg3w4xQ2wNEB1g/giphy.webp'); /* Replace with a relevant image URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+.btn-primary {
+    background-color: #6c63ff;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #574bd8;
+}
+.nav-link {
+    color: white !important;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: #6c63ff !important;
+}
+canvas {
+    border: 1px solid #ccc;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Overlay for the modal */
+.overlay {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.9);
+justify-content: center;
+align-items: center;
+}
+
+/* Modal content (the image) */
+.modal-content {
+max-width: 90%;
+max-height: 80%;
+display: block;
+margin: auto;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+border-radius: 5px;
+}
+
+/* Caption */
+#caption {
+color: white;
+text-align: center;
+margin-top: 15px;
+font-size: 18px;
+}
+
+/* Close button */
+.close {
+position: absolute;
+top: 15px;
+right: 35px;
+color: white;
+font-size: 40px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+
+

@@ -6,6 +6,7 @@
     <title>Art & Creativity</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
@@ -40,7 +41,6 @@
     <div>
         <h1>Explore. Create. Inspire.</h1>
         <p>Your hub for artistic expression and creativity.</p>
-        <a href="#gallery" class="btn btn-primary btn-lg mt-3">Explore Gallery</a>
     </div>
 </div>
 
@@ -74,23 +74,30 @@
         <h2 class="text-center mb-4">Gallery</h2>
         <div class="row">
             <div class="col-md-4 mb-3">
-                <img src="https://hd.wallpaperswide.com/thumbs/the_starry_night-t2.jpg" alt="Art 1" class="img-fluid rounded">
+                <img src="https://hd.wallpaperswide.com/thumbs/the_starry_night-t2.jpg" alt="Art 1" class="img-fluid rounded" onclick="openModal(this)">
                 <h5 class="mt-2">Starry Night</h5>
                 <p>By Vincent van Gogh</p>
             </div>
             <div class="col-md-4 mb-3">
-                <img src="https://www.singulart.com/blog/wp-content/uploads/2019/08/the-persistence-of-memory-1931-1140x867.jpg" alt="Art 2" class="img-fluid rounded">
+                <img src="https://www.singulart.com/blog/wp-content/uploads/2019/08/the-persistence-of-memory-1931-1140x867.jpg" alt="Art 2" class="img-fluid rounded" onclick="openModal(this)">
                 <h5 class="mt-2">The Persistence of Memory</h5>
                 <p>By Salvador Dalí</p>
             </div>
             <div class="col-md-4 mb-3">
-                <img src="https://www.prints.co.nz/mm5/graphics/00000001/509_Mona_Lisa_Leonardo_Da_Vinci.jpg" alt="Art 3" class="img-fluid rounded">
+                <img src="https://www.prints.co.nz/mm5/graphics/00000001/509_Mona_Lisa_Leonardo_Da_Vinci.jpg" alt="Art 3" class="img-fluid rounded" onclick="openModal(this)">
                 <h5 class="mt-2">Mona Lisa</h5>
                 <p>By Leonardo da Vinci</p>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Modal Overlay -->
+<div id="imageModal" class="overlay" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img id="modalImage" class="modal-content">
+    <div id="caption"></div>
+</div>
 
 <!-- Footer -->
 <footer class="bg-dark text-light py-4">
@@ -100,5 +107,27 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function openModal(imageElement) {
+        // Get the modal and its elements
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const caption = document.getElementById('caption');
+    
+        // Set the modal image source and caption
+        modalImage.src = imageElement.src;
+        caption.innerText = imageElement.alt;
+    
+        // Show the modal
+        modal.style.display = 'flex';
+    }
+    
+    function closeModal() {
+        // Hide the modal
+        const modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+    }
+    </script>
+    
 </body>
 </html>
